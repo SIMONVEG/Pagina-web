@@ -1,0 +1,137 @@
+/* Bootstrap Integration */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Estilos del Header */
+header {
+    width: 100%;
+    height: 100px; /* Solo 100px de alto */
+    background-color: rgba(0, 0, 0, 0.365); /* Sin fondo sólido */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: fixed; /* Navbar fija */
+    top: 0;
+    left: 0;
+    z-index: 9999; /* Asegurar que esté sobre todo */
+}
+
+/* Logo */
+.logo img {
+    height: 80px;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+}
+
+.navegacion ul li {
+    position: relative;
+}
+
+.navegacion ul li a {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 20px;
+    display: block;
+    transition: .3s linear;
+    text-decoration: none;
+}
+
+.navegacion ul li a:hover {
+    color: #00c9bd;
+}
+
+/* Submenú */
+.navegacion .submenu:hover .hijos {
+    display: block;
+}
+
+.navegacion .submenu .hijos {
+    display: none;
+    position: absolute;
+    background: #0b132b;
+    width: 200px;
+    top: 100%;
+    left: 0;
+}
+
+.navegacion .hijos li:hover .hijos2 {
+    display: block;
+}
+
+.navegacion .hijos2 {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #0b132b;
+    width: 200px;
+}
+
+/* Menú responsive */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navegacion ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #0b132b;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    .navegacion ul.show {
+        display: flex;
+    }
+
+    .navegacion ul li {
+        display: block;
+        text-align: center;
+    }
+
+    .navegacion .submenu .hijos,
+    .navegacion .hijos2 {
+        position: static;
+        width: 100%;
+    }
+}

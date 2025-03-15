@@ -1,0 +1,111 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin: 0;
+    min-height: 100vh;  /* Cambié height a min-height para permitir que el contenido crezca */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: auto;  /* Cambié overflow a auto para permitir scroll si es necesario */
+}
+
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+}
+
+.content {
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+}
+  
+
+
+.dynamic-text {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    color: #1200dc; /* Color de la palabra estática */
+    top: 50%;        /* Coloca el texto a la mitad de la altura del contenedor */
+    left: 50%;       /* Coloca el texto a la mitad del contenedor */
+    transform: translate(-50%, -50%); /* Centra el texto tanto horizontal como verticalmente */
+    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden; /* Evita desbordes */
+}
+
+#changing-word {
+    color: #FFD700; /* Color destacado para la palabra cambiante */
+    font-weight: bold;
+    display: inline-block; /* Asegura que se comporte como un bloque en línea */
+    white-space: nowrap; /* Evita saltos de línea */
+    overflow: hidden; /* Oculta el contenido extra */
+    clip-path: inset(0 100% 0 0); /* Inicialmente oculta la palabra */
+    animation: wipe 1s ease forwards; /* Aplica la animación */
+    vertical-align: middle; /* Alinea el texto dorado con el texto estático */
+}
+  
+/* Keyframes para el efecto de barrido */
+@keyframes wipe {
+    from {
+        clip-path: inset(0 100% 0 0); /* Oculta todo excepto el borde izquierdo */
+    }
+    to {
+        clip-path: inset(0 0 0 0); /* Muestra toda la palabra */
+    }
+}
+
+
+.recuadro-blanco {
+    position: absolute;
+    top: 60%;
+    background-color: #fff; /* Color del recuadro */
+    padding: 70px 300px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centrado del texto */
+    max-width: 500px; /* Ancho máximo */
+}
+
+.recuadro-blanco p {
+    margin: 0;
+    color: #000080; /* Color azul para el texto */
+    font-size: 1.5rem;
+}
+
+.texto-dorado {
+    color: #fdb913; /* Color dorado para la palabra Justicia */
+}
+
+.logo1 {
+    position: absolute;
+    top: 83%;
+    width: 50%;
+    max-width: 150px; /* Ancho máximo del contenedor */
+    height: 150px; /* Altura del contenedor */
+    background-image: url('Logo.png'); /* Imagen como fondo */
+    background-size: 150px; /* La imagen cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+
+.container-text1 {
+    width: 60%;
+    max-width: 750%;         /* Ancho máximo */
+    text-align: center;       /* Alineación centrada del texto */
+    position: absolute;
+    top: 100%;                /* Ubicación desde el top */
+    left: 50%;                /* Ubicación desde el 50% del contenedor */
+    transform: translateX(-50%); /* Mueve el elemento hacia la izquierda para centrarlo */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: black;
+}

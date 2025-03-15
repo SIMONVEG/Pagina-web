@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IGLESIA PENTECOSTAL UNIDA LATINOAMERICANA PANAMÁ</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+        body {
+            background-image: url('Fondo1.jpg'); /* Ruta de la imagen */
+            background-size: cover; /* Ajusta la imagen al tamaño de la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que se repita */
+            height: 100vh; /* Usa el 100% de la altura de la pantalla */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://cristianvasquez13.github.io/links/" class="logo" target="_blank">
+            <img src="Logo.png" alt="Logo">
+        </a>
+        <button class="menu-toggle">☰</button>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="navbar.html" target="_blank">Inicio</a></li>
+                <li class="submenu">
+                    <a href="#">Somos</a>
+                    <ul class="hijos">
+                        <li><a href="#">¿Quiénes Somos?</a></li>
+                        <li><a href="#">Junta Nacional</a></li>
+                        <li class="submenu">
+                            <a href="#">Ministerios</a>
+                            <ul class="hijos2">
+                                <li><a href="Mision Juvenil.html">Misión Juvenil</a></li>
+                                <li><a href="#">Misión Femenil</a></li>
+                                <li><a href="#">Iglesia Infantil</a></li>
+                                <li><a href="#">Misión Familia</a></li>
+                                <li><a href="#">Crecimiento Espiritual</a></li>
+                                <li><a href="#">Misiones</a></li>
+                                <li><a href="#">Música</a></li>
+                                <li><a href="#">Decom</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="https://cristianvasquez13.github.io/links/" target="_blank">Eventos</a></li>
+                <li><a href="https://cristianvasquez13.github.io/links/" target="_blank">Obras</a></li>
+                <li><a href="https://cristianvasquez13.github.io/links/" target="_blank">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.navegacion ul').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
