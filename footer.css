@@ -1,0 +1,87 @@
+.FMj {
+    top: 500%;
+    position: absolute; /* Permite que el scroll funcione */
+    width: 100vw;
+    height: 100vh; /* Ocupará toda la pantalla cuando se haga scroll */
+    background-image: url('FF..jpg'); /* Ajusta la ruta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -99;
+}
+
+
+
+.footer-container {
+    position: absolute;
+    top: 500%;
+    width: 110vw;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.568);
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    z-index: 99;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    color: #ffc107;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffc107;
+}
+
+.submenu-list {
+    list-style: none;
+    padding-left: 15px;
+    display: none;
+}
+
+.submenu:hover .submenu-list {
+    display: block;
+}
+
+.social-icons a img {
+    width: 25px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    position: absolute;
+    top: 590%;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    background: #061d3a;
+}

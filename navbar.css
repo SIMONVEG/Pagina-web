@@ -13,18 +13,53 @@
 header {
     width: 100%;
     height: 100px; /* Solo 100px de alto */
-    background-color: rgba(0, 0, 0, 0.365); /* Sin fondo sólido */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 40px;
     position: fixed; /* Navbar fija */
     top: 0;
     left: 0;
     z-index: 9999; /* Asegurar que esté sobre todo */
 }
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Reduce el fondo a 50px sin afectar el contenido */
+    background-color: rgba(0, 0, 0, 0.365);
+    z-index: -1;
+}
 
-/* Logo */
+/* Redes sociales a la derecha */
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 40px;
+}
+
+.redes-sociales a {
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.redes-sociales a:hover {
+    color: #ff0202;
+}
+
+/* Contenedor del logo a la izquierda */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    left: 40px;
+}
+
 .logo img {
     height: 80px;
 }
@@ -33,12 +68,12 @@ header {
     transform: scale(1.1);
 }
 
-/* Navegación */
+/* Navegación centrada */
 .navegacion {
+    flex-grow: 1;
     display: flex;
+    justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 1000;
 }
 
 .navegacion ul {
@@ -57,14 +92,14 @@ header {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: bold;
-    padding: 12px 20px;
+    padding: 10px 15px;
     display: block;
     transition: .3s linear;
     text-decoration: none;
 }
 
 .navegacion ul li a:hover {
-    color: #00c9bd;
+    color: #ff0202;
 }
 
 /* Submenú */
